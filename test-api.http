@@ -1,0 +1,139 @@
+### Create Admin User
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "name": "admin User",
+  "email": "admin@example.com",
+  "password": "password123",
+  "role": "Client"
+}
+
+
+### Login Admin User
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "password123"
+}
+
+
+### Create client
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "name": "client User",
+  "email": "client@example.com",
+  "password": "password123",
+  "role": "client"
+}
+
+
+### Login client
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "client@example.com",
+  "password": "password123"
+}
+
+### Get All Users (Authenticated User)
+GET http://localhost:4000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNWUxNTMxYjViOTdjZmY3MDVmN2YiLCJpYXQiOjE3NDU5MDUzOTAsImV4cCI6MTc0NTkwNTY5MH0.gp7QKNpKMgqbgTGrkpHBNX_ntz9ofxNUPXcl-Gz0wo0
+### Get User by ID
+GET http://localhost:4000/api/users/6810594131b5b97cff705f54
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNWUxNTMxYjViOTdjZmY3MDVmN2YiLCJpYXQiOjE3NDU5MDQzNzcsImV4cCI6MTc0NTkwNDY3N30.0P8NvcxaK8qRooGSor9LeTtG58LhnGgs7qKV_EpqKCM
+
+
+### Edit User by ID
+PUT http://localhost:4000/api/users/6810594131b5b97cff705f54
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNWUxNTMxYjViOTdjZmY3MDVmN2YiLCJpYXQiOjE3NDU5MDQzNzcsImV4cCI6MTc0NTkwNDY3N30.0P8NvcxaK8qRooGSor9LeTtG58LhnGgs7qKV_EpqKCM
+Content-Type: application/json
+
+{
+  "name": "Updated User",
+  "email": "testeado@gmail.com",
+  "password": "newpassword123",
+  "role": "user"
+}
+
+### Delete User by ID
+DELETE http://localhost:4000/api/users/6810594131b5b97cff705f54
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNWUxNTMxYjViOTdjZmY3MDVmN2YiLCJpYXQiOjE3NDU5MDQzNzcsImV4cCI6MTc0NTkwNDY3N30.0P8NvcxaK8qRooGSor9LeTtG58LhnGgs7qKV_EpqKCM
+
+
+### Create Product (Admin only)
+POST http://localhost:4000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNWUxNTMxYjViOTdjZmY3MDVmN2YiLCJpYXQiOjE3NDU5MDQzNzcsImV4cCI6MTc0NTkwNDY3N30.0P8NvcxaK8qRooGSor9LeTtG58LhnGgs7qKV_EpqKCM
+Content-Type: application/json
+
+{
+  "name": "Gaming Keyboard",
+  "description": "RGB mechanical keyboard",
+  "price": 120,
+  "stock": 50,
+  "category": "Electronics"
+}
+
+### Get All Products
+GET http://localhost:4000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNjRhMDMxYjViOTdjZmY3MDYwM2MiLCJpYXQiOjE3NDU5MDQ4MDMsImV4cCI6MTc0NTkwNTEwM30.PS2k9zM2Qr9jFds1Px9llz4b-m25Tlwnkh2oWAmet-8
+
+### Get Product by ID
+GET http://localhost:4000/api/products/68105d8531b5b97cff705f7a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNjRhMDMxYjViOTdjZmY3MDYwM2MiLCJpYXQiOjE3NDU5MDQ4MDMsImV4cCI6MTc0NTkwNTEwM30.PS2k9zM2Qr9jFds1Px9llz4b-m25Tlwnkh2oWAmet-8
+
+### Edit Product by ID
+PUT http://localhost:4000/api/products/68105d8531b5b97cff705f7a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNjRhMDMxYjViOTdjZmY3MDYwM2MiLCJpYXQiOjE3NDU5MDQ4MDMsImV4cCI6MTc0NTkwNTEwM30.PS2k9zM2Qr9jFds1Px9llz4b-m25Tlwnkh2oWAmet-8
+Content-Type: application/json
+
+{
+  "price": 110,
+  "stock": 45
+}
+
+### Delete Product by ID
+DELETE http://localhost:4000/api/products/68105d8531b5b97cff705f7a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNjRhMDMxYjViOTdjZmY3MDYwM2MiLCJpYXQiOjE3NDU5MDQ4MDMsImV4cCI6MTc0NTkwNTEwM30.PS2k9zM2Qr9jFds1Px9llz4b-m25Tlwnkh2oWAmet-8
+
+
+
+### Get All Orders (Authenticated User)
+GET http://localhost:4000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNTk0MTMxYjViOTdjZmY3MDVmNTQiLCJpYXQiOjE3NDU5MDI1MzYsImV4cCI6MTc0NTkwMjgzNn0.h3aCPYI7qaif-I0PRP1ayg7ptNjjbfRblPAgYmFOejw
+
+
+### Get Order by ID
+GET http://localhost:4000/api/orders/6810623631b5b97cff705fdd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNTk0MTMxYjViOTdjZmY3MDVmNTQiLCJpYXQiOjE3NDU5MDI1MzYsImV4cCI6MTc0NTkwMjgzNn0.h3aCPYI7qaif-I0PRP1ayg7ptNjjbfRblPAgYmFOejw
+
+### Create Order
+POST http://localhost:4000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwNTk0MTMxYjViOTdjZmY3MDVmNTQiLCJpYXQiOjE3NDU5MDI1MzYsImV4cCI6MTc0NTkwMjgzNn0.h3aCPYI7qaif-I0PRP1ayg7ptNjjbfRblPAgYmFOejw
+Content-Type: application/json
+
+{
+  "userId": "68105be731b5b97cff705f67",
+  "shippingAddress": {
+    "street": "TEST",
+    "city": "TEST City",
+    "state": "TEST",
+    "zip": "12345",
+    "country": "TEST Country"
+  },
+  "items": [
+    {
+      "id": "68105e7231b5b97cff705f85",
+      "quantity": 2
+    },
+    {
+      "id": "68105e7231b5b97cff705f85",
+      "quantity": 1
+    }
+  ]
+}
