@@ -1,3 +1,5 @@
+## LINK VIDEO https://iteso01-my.sharepoint.com/:v:/g/personal/axel_cabrera_iteso_mx/ER4nUtYZk8xJitwUAaKClasBOlLm9PtKrkSEZ0UZLCmU-A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IRUpLA
+
 ## Cumplimiento de Requerimientos
 
 | Requerimiento | % | ¿Cumplido? | Comentario |
@@ -11,3 +13,5 @@
 | Documentación Swagger | 10% | ⚠️ No funcional totalmente, se realizó manualmente pero no fue posible integrar Swagger-UI por tema de settings de URL. Se documentaron endpoints usando HTTP manualmente. Archivo de Swagger generado manualmente. |
 | Pruebas funcionales con capturas | 15% | ✅ Sí, evidencias incluidas en archivo Word |
 | Conclusión objetiva | 5% | ✅ Sí, incluida en archivo Word|
+
+
